@@ -45,7 +45,7 @@ public class UserAuthorizationInterceptor implements HandlerInterceptor {
                 return false;
             }
 
-            // if an authorized user try to access the otp page then it will be access denied
+            // if an authorized user with otp authenticated try to access the otp page then it will be access denied
 
             if(session.getAttribute("otp_done") != null) {
                 if(session.getAttribute("otp_done").equals("TRUE")) {
